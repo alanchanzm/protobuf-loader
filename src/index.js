@@ -1,9 +1,9 @@
-const { load } = require('protobufjs');
+var protobuf = require('protobufjs');
 
 function protobufLoader() {
-  const callback = this.async();
+  var callback = this.async();
 
-  load(this.resourcePath, function(err, root) {
+  protobuf.load(this.resourcePath, function(err, root) {
     if (err) return callback(err);
     callback(null, `module.exports = ${JSON.stringify(root)}`);
   });

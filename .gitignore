@@ -3,6 +3,4 @@ dist
 .vscode
 yarn.lock
 webpack.config.js
-src/awesome.proto
 node_modules
-.npmignore
