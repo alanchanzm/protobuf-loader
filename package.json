@@ -12,10 +12,7 @@
     "loader"
   ],
   "bin": "",
-  "main": "src/index.js",
-  "engines": {
-    "node": ">= 6.9.0 < 7.0.0 || >= 8.9.0"
-  },
+  "main": "index.js",
   "scripts": {
     "webpack": "webpack",
     "webpack-dev-server": "webpack-dev-server",
