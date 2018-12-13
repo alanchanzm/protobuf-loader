@@ -1,5 +1,5 @@
 {
-  "name": "protobuf-loader",
+  "name": "protobuf-json-loader",
   "version": "1.0.0",
   "description": "A protobuf loader module for webpack, transfer proto to json",
   "license": "MIT",
@@ -11,14 +11,22 @@
     "protobuf.js",
     "loader"
   ],
-  "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "bin": "",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">= 6.9.0 < 7.0.0 || >= 8.9.0"
+  },
   "scripts": {
     "webpack": "webpack",
     "webpack-dev-server": "webpack-dev-server",
     "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
     "server": "npm run webpack-dev-server -- --env.mode development",
     "dev": "npm run webpack -- --env.mode development",
-    "dev:debug": "npm run debug -- --env.mode development"
+    "dev:debug": "npm run debug -- --env.mode development",
+    "prod": "npm run webpack -- --env.mode production"
   },
   "dependencies": {
     "protobufjs": "^6.8.8"
@@ -33,5 +41,12 @@
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
+  },
+  "pre-commit": "lint-staged",
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
