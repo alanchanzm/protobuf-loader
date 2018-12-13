@@ -1,6 +1,6 @@
 {
   "name": "protobuf-json-loader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A protobuf loader module for webpack, transfer proto to json",
   "license": "MIT",
   "author": "Alan Chan",
